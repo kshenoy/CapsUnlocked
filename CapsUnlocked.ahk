@@ -13,7 +13,7 @@ StartTime := 0
 *Capslock::
 if (GetKeyState("LControl", "P")) {
   KeyWait, CapsLock
-  Send {CapsLock Down}
+  SetCapsLockState, % (t:=!t) ?  "On" :  "Off"
   return
 }
 
